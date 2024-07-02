@@ -9,3 +9,12 @@ Output
 
 Solution:
 
+log=input()
+floor=0
+for i in log:
+    if i=='(':
+        floor+=1
+    elif i==')':
+        floor-=1
+print(floor)        
+
