@@ -1,0 +1,11 @@
+An integer floor telling the floor where we are
+Constraints
+4 ≤ length of log ≤ 5600
+Example
+Input
+(())
+Output
+0
+
+Solution:
+
