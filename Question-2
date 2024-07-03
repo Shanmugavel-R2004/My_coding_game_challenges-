@@ -1,0 +1,32 @@
+Jeff needs your help calculating his final balance after a series of deposits (D) and withdrawals (W) done to his bank account! He already has V in his bank account.
+
+Input
+Line 1: Two Integers V denoting his initial balance, and N denoting the amount of transactions he will make.
+Next N lines: One String Transaction denoting if he's depositing (D) or withdrawing (W), along with an integer Amount denoting the amount he is handling in the transaction.
+
+Output
+Output the final balance in Jeff's bank account.
+0=<V,N,Amount=<5000
+Transaction = "W"||"D"
+
+Input
+40 3
+W 120
+D 120
+D 30
+
+Output
+70
+
+Solution:
+
+v, n = [int(i) for i in input().split()]
+for i in range(n):
+    inputs = input().split()
+    tr = inputs[0]
+    amount = int(inputs[1])
+    if(tr=="W"):
+        v=v-amount
+    elif (tr=="D"):
+        v=v+amount
+print(v)
