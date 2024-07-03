@@ -1,0 +1,23 @@
+Almost all of the words contain vowels. The letters which are considered to be vowels (in English) are a,e,i,o,u.
+Display the total number of vowels present at odd indexes in the given string.
+
+Input:
+A string
+
+Output:
+The count of total number of vowels present in the given string at odd indexes.
+
+Input
+hello world !!
+
+Output
+2
+
+Solution:
+
+s = input()
+c = 0
+for i in range(len(s)):
+    if i%2 and s[i] in 'aeiouAEIOU':
+        c += 1
+print(c)
