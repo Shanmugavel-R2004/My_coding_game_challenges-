@@ -1,0 +1,18 @@
+You get a a line of a String and you have to convert the characters of the line to their ASCII number and take the sum of these.
+After this step, you take the square-root of the sum and round down, if needed.
+
+Input
+Line 1: The string to convert
+
+Output
+Line 1: The solution as integer
+
+Input
+ABC
+
+Output
+14
+
+Solution:
+
+import math;a=input();print(int(math.sqrt(sum(ord(i) for i in a))))
