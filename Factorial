@@ -1,0 +1,21 @@
+Find the number of different ways of ordering a list of n elements.
+
+Input
+Line 1: An integer n for the number of elements to be ordered.
+
+Output
+Line 1: An integer corresponding to the number of different ways the list can be ordered.
+
+Input
+4
+
+Output
+24
+
+solution:
+
+n=int(input())
+fact=1
+for i in range(1,n+1):
+    fact=fact*i
+print(fact)    
