@@ -1,0 +1,57 @@
+Count the missing parts for building a bicycle.
+
+_________________
+|               |
+|  STOLEN BIKE  |
+|               |
+|      __ >     |
+|    (*)/(*)    |
+|               |
+| call if found |
+|   745-83-21   |
+|_______________|
+
+Greg's bike was stolen and he needs means to commute.
+Scraping a temporary bike from parts can save him a lot of cash.
+
+The parts he needs:
+- two wheels: (o) or (*) (matching or mixed)
+- a reasonable frame: -- or __
+- one crankset: \ or /
+- the handlebars: >
+
+Greg has some parts in the garage, but hates searching by hand.
+Write a program that tells him how many parts he's missing.
+
+Input
+Line 1: An integer N for the number of parts in the garage.
+Next N lines: Each part, as a string.
+
+Output
+The number of missing pieces to complete the bike, M.
+
+Input
+5
+(*)
+(o)
+--
+>
+\
+
+Output
+0
+
+Solution:
+
+d2={"wheel":2,"frame":1,"crank":1,"handle":1}
+d1={"(o)":"wheel","(*)":"wheel","--":"frame","__":"frame","/":"crank","\\":"crank",">":'handle'}
+n = int(input())
+missing=0
+for i in range(n):
+    part = input()
+    if part in d1:
+        d2[d1[part]]-=1
+for i in d2:
+    if d2[i]>0:
+        missing+=d2[i]
+print(missing)
