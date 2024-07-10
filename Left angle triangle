@@ -1,0 +1,33 @@
+Write a program to print left angle triangle
+
+Example:
+
+Input:
+
+4
+
+Output:
+
+   *
+
+  **
+
+ ***
+
+****
+
+Input format:
+Input accepts an integer n
+
+Output format:
+Output prints the pattern as shown in example.
+
+Solution:
+
+n=int(input())
+for i in range(1,n+1):
+    for j in range(n-i):
+        print(' ',end="")
+    for k in range(i):
+        print("*",end="")
+    print()    
