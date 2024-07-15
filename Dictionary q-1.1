@@ -1,0 +1,31 @@
+Lara, a skilled archivist, has two collections of ancient artifacts stored in separate dictionaries. 
+Each dictionary contains artifact names as keys and their respective ages in years as values. 
+Lara wants to merge these two dictionaries into a single dictionary to create a unified record of all the artifacts.
+Write a Python program that takes two dictionaries as input from Lara and merges them into one. 
+The program should then print the merged dictionary.
+
+Input Format
+Two dictionaries representing Lara's artifact collections. Each dictionary has artifact names as keys and their respective ages as values.
+
+Output Format
+A single dictionary that merges the two input dictionaries and Print the merged dictionary.
+
+Sample Input:
+Ten:10, Twenty:20
+Thirty:30, Forty:40
+
+Note: Separate each pair by comma and a space 
+
+Sample Output:
+{'Ten': 10, 'Twenty': 20, 'Thirty': 30, 'Forty': 40}
+
+Solutioin:
+
+dic_1=input()
+dic_2=input()
+dict_1=dict(i.split(":") for i in dic_1.split(","))
+dict_2=dict(i.split(":") for i in dic_2.split(","))
+dict_1={key : int(value) for key,value in dict_1.items()}
+dict_2={key : int(value) for key,value in dict_2.items()}
+merged_dict={**dict_1,**dict_2}
+print(merged_dict)
