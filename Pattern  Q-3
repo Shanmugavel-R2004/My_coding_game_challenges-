@@ -1,0 +1,29 @@
+Print the following pattern
+
+Input Format:
+Accept an Integer as input
+
+Output Format:
+Print the Pyramid Pattern, similar to sample input.
+
+Example:
+Sample Input
+4
+
+Sample Output
+###*
+##***
+#*****
+*******
+
+In the above, spaces are indicated with hash(#) to have a clarity on count of spaces.
+
+NOTE:While coding don't print hash, do print space itself.
+
+Solution:
+
+a=int(input())
+for i in range(0,n):
+    space=' '*(n-i-1)
+    stars='*'*(2-i+1)
+    print(space + stars)    
