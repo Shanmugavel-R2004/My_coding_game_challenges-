@@ -1,0 +1,30 @@
+Lara, while organizing her digital library, needs to frequently check if certain values exist in her metadata dictionaries. 
+Each dictionary contains metadata fields as keys and their respective values.
+Write a Python program that takes a dictionary and a value as input from Lara and checks if the given value exists in the dictionary. 
+The program should then print whether the value is present in the dictionary.
+
+Input Format
+A dictionary representing Lara's metadata collection (keys are metadata fields, values are their respective values).
+
+Output Format
+A message indicating whether the value is present in the dictionary or not
+
+Sample Input
+aa:100, b:200, c:300
+200
+
+Note: Separate each pair by comma and a space
+
+Sample Output:
+Present
+
+Solution:
+
+a= input()
+b= input()
+c= dict(item.split(":") for item in a.split(", "))
+value = b.strip()
+if value in c.values():
+    print("Present")
+else:
+    print("Not Present")
